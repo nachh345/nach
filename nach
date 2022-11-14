@@ -1,0 +1,42 @@
+pragma solidity ^0.8.7;
+//SPDX-License-Identifier:UNLICENSED
+
+contract studenData{
+
+
+    string[] public addSubject;
+    
+    struct student{
+        string name;
+        uint mobileNo;
+        string emailAddress;
+        string[] subjects;
+    }
+    
+    mapping(uint => student) public class;
+
+    function addStudent(uint _rollno,string memory _sname,uint _number,string memory _email,string memory _subject1,string memory _subject2,string memory _subject3) public {
+        addSubject.push(_subject1);
+        addSubject.push(_subject2);
+        addSubject.push(_subject3);
+        class[_rollno] = student(_sname,_number,_email,addSubject);
+    }
+
+     function getStudent(uint _rollno,string memory _sname,uint _number,string memory _email,string memory _subject1,string memory _subject2,string memory _subject3) public {}
+
+    
+    address payable public schoolAccount = payable(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+    function payfees() public payable{
+        schoolAccount.transfer(msg.value);
+    }
+
+}
+
+contract insti{
+    
+}
+//compile 
+//go to deploy add number 2 direction
+//change contract
+//deploy
+//get set pay
