@@ -35,6 +35,7 @@ contract studenData{
 contract insti{
     
 }
+//default space .sol
 //compile 
 //go to deploy add number 2 direction
 //change contract
